@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getPostThunk } from "./actionFunc/post";
+import { Routes, Route } from "react-router-dom";
+import Test from "./Test";
+import Home from "./Home";
 
 const App = () => {
   const { post } = useSelector((state) => state);
@@ -11,14 +13,13 @@ const App = () => {
     dispatch(getPostThunk());
   }, []);
   console.log(post);
+
   return (
     <div>
-      <ul>
-        <li>1234</li>
-        <li>1234</li>
-        <li>1234</li>
-        <li>1234</li>
-      </ul>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/test" element={<Test />} />
+      </Routes>
     </div>
   );
 };

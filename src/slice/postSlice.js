@@ -12,7 +12,6 @@ const postSlice = createSlice({
       state.pending = true;
     });
     builder.addCase(getPostThunk.fulfilled, (state, action) => {
-      debugger;
       state.pending = false;
       state.data = action.payload;
     });
