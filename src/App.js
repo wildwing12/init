@@ -4,6 +4,7 @@ import { getPostThunk } from "./actionFunc/post";
 import { Routes, Route } from "react-router-dom";
 import Test from "./Test";
 import Home from "./Home";
+import Song from "./Song";
 import Children1 from "./children-test/Children1";
 import Children2 from "./children-test/Children2";
 
@@ -21,6 +22,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/song" element={<Song />} />
         <Route path="/children1" element={<Children1 />} />
         <Route path="/children2" element={<Children2 />} />
       </Routes>
